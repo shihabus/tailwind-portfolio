@@ -491,6 +491,7 @@ export default function Index() {
                 >
                   Next.js
                 </a>
+                .
               </p>
             </div>
             {/* ------ contact me ------- */}
