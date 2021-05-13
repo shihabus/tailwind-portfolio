@@ -1,7 +1,43 @@
 import Head from "next/head";
 import React from "react";
+import Link from "next/link";
 
 export default function Index() {
+  const experienceRef = React.useRef(null);
+  const skillsRef = React.useRef(null);
+  const projectsRef = React.useRef(null);
+
+  React.useEffect(() => {
+    let observer;
+    if (experienceRef.current && skillsRef.current && projectsRef.current) {
+      const options = {
+        threshold: 0.2,
+      };
+      observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          const navElement = document.querySelector(
+            `a[href="/#${entry.target.id}"]`
+          );
+          if (
+            entry.isIntersecting &&
+            !navElement.classList.contains("text-gray-100")
+          ) {
+            navElement.classList.add("text-gray-100");
+          } else if (
+            !entry.isIntersecting &&
+            navElement.classList.contains("text-gray-100")
+          ) {
+            navElement.classList.remove("text-gray-100");
+          }
+        });
+      }, options);
+      observer.observe(experienceRef.current);
+      observer.observe(skillsRef.current);
+      observer.observe(projectsRef.current);
+    }
+    return () => observer?.disconnect();
+  }, [experienceRef, skillsRef, projectsRef]);
+
   return (
     <>
       <Head>
@@ -10,37 +46,67 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-night min-h-screen w-full font-sans">
-        <div className="container mx-auto text-white px-6 py-4 md:p-8 lg:py-16 lg:flex">
+        <div className="container mx-auto text-white px-6 py-4 md:p-8 lg:py-0 lg:flex">
           {/* ---------left--------- */}
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 lg:py-20 lg:h-screen lg:flex lg:flex-col lg:justify-between">
             {/* ------- hero -------- */}
-            <h1 className="mb-6 font-semibold text-6xl leading-tight">
-              Hello, I'm Shihab
-            </h1>
+            <div>
+              <h1 className="mb-6 font-semibold text-6xl leading-tight">
+                Hello, I'm Shihab
+              </h1>
 
-            {/* ------- para -------- */}
-            <p className="leading-loose mb-6 text-dawn">
-              I am frontend developer. Build <span role="img"> 🌈 </span> UI
-              using modern frontend tools, for nearly 4 years. Currently working
-              at Dunzo. Extensive experience with React and React Native. Stack
-              and tech agnostic by a true JS enthusiast.
-            </p>
-            {/* ------- para -------- */}
+              {/* ------- para -------- */}
+              <p className="leading-loose mb-6 text-dawn">
+                I am frontend developer. Build <span role="img"> 🌈 </span> UI
+                using modern frontend tools, for nearly 4 years. Currently
+                working at Dunzo. Extensive experience with React and React
+                Native. Stack and tech agnostic by a true JS enthusiast.
+              </p>
+              {/* ------- para -------- */}
+            </div>
 
             {/* ------- hero -------- */}
+
+            {/* ----- tags ------- */}
+            <div className="hidden lg:block text-gray-500">
+              <Link href={{ pathname: "/", hash: "experience" }}>
+                <a className="inline-flex items-center w-full">
+                  1.
+                  <div className="w-1/4 h-0.5 bg-gray-500 mx-3"></div>
+                  Experience
+                </a>
+              </Link>
+
+              <Link href={{ pathname: "/", hash: "skills" }}>
+                <a className="inline-flex items-center w-full">
+                  2.
+                  <div className="w-1/4 h-0.5 bg-gray-500 mx-3"></div>
+                  Skills
+                </a>
+              </Link>
+
+              <Link href={{ pathname: "/", hash: "contact-me" }}>
+                <a className="inline-flex items-center w-full">
+                  3.
+                  <div className="w-1/4 h-0.5 bg-gray-500 mx-3"></div>
+                  Projects
+                </a>
+              </Link>
+            </div>
+            {/* ----- tags ------- */}
 
             {/* ------------- handlers ------------- */}
-            <div className="flex items-center mb-14">
+            <div className="flex items-center mb-14 lg:block">
               {/* ------- image ------- */}
               <img
                 src="/logo.jpg"
-                className="w-10 h-10 rounded-full"
+                className="w-10 h-10 lg:w-16 lg:h-16 rounded-full lg:mb-6"
                 alt="profile image"
               />
               {/* ------- image ------- */}
 
               {/* ----- links ------ */}
-              <div className="flex ml-12 space-x-6 items-center">
+              <div className="flex ml-12 space-x-6 items-center lg:ml-0 lg:flex-col lg:items-start lg:space-y-4 lg:space-x-0">
                 {/* ----------- GitHub ---------- */}
                 <a
                   className="flex items-baseline md:space-x-3 hover:text-gray-500"
@@ -52,13 +118,13 @@ export default function Index() {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
-                    class="w-6 h-6 md:w-4 md:h-4 fill-current"
+                    className="w-6 h-6 md:w-4 md:h-4 fill-current"
                   >
                     <title>GitHub icon</title>
                     <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
                   </svg>
                   <span className="hidden md:block">GitHub</span>
-                  <div class="hidden md:block">
+                  <div className="hidden md:block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -67,7 +133,7 @@ export default function Index() {
                       stroke-linejoin="round"
                       viewBox="0 0 12 12"
                       aria-hidden="true"
-                      class="w-3 h-3 flex-none stroke-current"
+                      className="w-3 h-3 flex-none stroke-current"
                     >
                       <title>External link icon</title>
                       <path d="M10.976 1.193A.314.314 0 0010.687 1H6.312a.313.313 0 000 .625h3.62L5.467 6.091a.313.313 0 00.443.442l4.466-4.466v3.62a.313.313 0 00.625 0V1.313a.328.328 0 00-.024-.119z"></path>
@@ -88,7 +154,7 @@ export default function Index() {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 310 310"
                     aria-hidden="true"
-                    class="w-6 h-6 md:w-4 md:h-4  fill-current"
+                    className="w-6 h-6 md:w-4 md:h-4  fill-current"
                   >
                     <title>LinkedIn</title>
                     <path d="M72.16 99.73H9.927a5 5 0 00-5 5v199.928a5 5 0 005 5H72.16a5 5 0 005-5V104.73a5 5 0 00-5-5zM41.066.341C18.422.341 0 18.743 0 41.362 0 63.991 18.422 82.4 41.066 82.4c22.626 0 41.033-18.41 41.033-41.038C82.1 18.743 63.692.341 41.066.341zM230.454 94.761c-24.995 0-43.472 10.745-54.679 22.954V104.73a5 5 0 00-5-5h-59.599a5 5 0 00-5 5v199.928a5 5 0 005 5h62.097a5 5 0 005-5V205.74c0-33.333 9.054-46.319 32.29-46.319 25.306 0 27.317 20.818 27.317 48.034v97.204a5 5 0 005 5H305a5 5 0 005-5V194.995c0-49.565-9.451-100.234-79.546-100.234z" />
@@ -103,7 +169,7 @@ export default function Index() {
                       stroke-linejoin="round"
                       viewBox="0 0 12 12"
                       aria-hidden="true"
-                      class="w-3 h-3 flex-none stroke-current"
+                      className="w-3 h-3 flex-none stroke-current"
                     >
                       <title>External link icon</title>
                       <path d="M10.976 1.193A.314.314 0 0010.687 1H6.312a.313.313 0 000 .625h3.62L5.467 6.091a.313.313 0 00.443.442l4.466-4.466v3.62a.313.313 0 00.625 0V1.313a.328.328 0 00-.024-.119z"></path>
@@ -124,7 +190,7 @@ export default function Index() {
                     viewBox="0 0 64 64"
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"
-                    class="w-7 h-7 md:w-5 md:h-5 fill-current"
+                    className="w-7 h-7 md:w-5 md:h-5 fill-current"
                   >
                     <title>Dev.to icon</title>
                     <path d="M0 49.6V14.4c0-.5.1-1 .3-1.4.2-.5.5-.9.8-1.2.4-.4.8-.6 1.2-.8.5-.2.9-.3 1.4-.3h56.5c.5 0 1 .1 1.4.3.5.2.9.5 1.2.8.4.4.6.8.8 1.2.2.5.3.9.3 1.4v35.1c0 .5-.1 1-.3 1.4-.2.5-.5.9-.8 1.2-.4.4-.8.6-1.2.8-.5.2-.9.3-1.4.3H3.8c-.5 0-1-.1-1.4-.3-.5-.2-.9-.5-1.2-.8-.4-.4-.6-.8-.8-1.2-.3-.4-.4-.8-.4-1.3z" />
@@ -143,7 +209,7 @@ export default function Index() {
                       stroke-linejoin="round"
                       viewBox="0 0 12 12"
                       aria-hidden="true"
-                      class="w-3 h-3 flex-none stroke-current"
+                      className="w-3 h-3 flex-none stroke-current"
                     >
                       <title>External link icon</title>
                       <path d="M10.976 1.193A.314.314 0 0010.687 1H6.312a.313.313 0 000 .625h3.62L5.467 6.091a.313.313 0 00.443.442l4.466-4.466v3.62a.313.313 0 00.625 0V1.313a.328.328 0 00-.024-.119z"></path>
@@ -158,11 +224,15 @@ export default function Index() {
             {/* --------- handlers----------- */}
           </div>
           {/* --------- left --------- */}
+
+          {/* ====================================================== */}
+
           {/* ---------- right --------- */}
-          <div className="flex-1 ">
+          <div className="flex-1 lg:py-20 lg:h-screen lg:overflow-y-scroll">
             {/* ------ experience ------- */}
             <h1 className="lg:hidden">Experience</h1>
-            <div className="space-y-8 lg:flex flex-col items-center mb-10">
+            <div id="experience" ref={experienceRef}></div>
+            <div className="space-y-8 lg:flex flex-col items-center mb-10 lg:mb-24">
               {/* ----- dunzo ---- */}
               <div className="my-3 p-6 bg-dusk text-gray-200 rounded-lg lg:w-2/3 transform transition  lg:hover:scale-110 duration-300">
                 <p className="text-xl font-medium">
@@ -276,7 +346,8 @@ export default function Index() {
             {/* ------ experience ------- */}
             {/* ------ skills ------- */}
             <h1 className="lg:hidden">Skills</h1>
-            <div className="space-y-3 lg:space-y-8 md:flex flex-wrap items-baseline mx-auto lg:mt-20 lg:w-3/4">
+            <div id="skills" ref={skillsRef}></div>
+            <div className="space-y-3 lg:space-y-8 md:flex flex-wrap items-baseline mx-auto lg:mt-20 lg:w-3/4 lg:mb-24">
               <div className="py-2 md:w-1/2">
                 <div className="flex space-x-2">
                   <div className="w-3 h-3 rounded-full bg-blue-500"></div>
@@ -285,15 +356,9 @@ export default function Index() {
                   <div className="w-3 h-3 rounded-full bg-blue-500"></div>
                   <div className="w-3 h-3 rounded-full bg-blue-500"></div>
 
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-
                   {/*  */}
                   <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
+                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
@@ -311,13 +376,6 @@ export default function Index() {
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
 
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-
-                  {/*  */}
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
@@ -334,12 +392,6 @@ export default function Index() {
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
 
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
@@ -354,12 +406,6 @@ export default function Index() {
                   <div className="w-3 h-3 rounded-full bg-purple-500"></div>
                   <div className="w-3 h-3 rounded-full bg-purple-500"></div>
                   <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-
-                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
 
@@ -381,12 +427,6 @@ export default function Index() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
 
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
-
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
@@ -406,12 +446,6 @@ export default function Index() {
                   <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
 
                   <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
-
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
@@ -427,12 +461,6 @@ export default function Index() {
                   <div className="w-3 h-3 rounded-full bg-pink-500"></div>
                   <div className="w-3 h-3 rounded-full bg-pink-500"></div>
 
-                  <div className="w-3 h-3 rounded-full bg-pink-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-pink-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-800"></div>
-
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
                   <div className="w-3 h-3 rounded-full bg-gray-800"></div>
@@ -443,8 +471,11 @@ export default function Index() {
               </div>
             </div>
             {/* ------ skills ------- */}
-            {/* ------ contact me ------- */}
-            {/* ------ contact me ------- */}
+
+            {/* ------ projects ------- */}
+            <div id="contact-me" ref={projectsRef}></div>
+            <div className="w-full h-64 bg-red-200">Contact Me</div>
+            {/* ------ projects ------- */}
           </div>
           {/* ---------- right --------- */}
         </div>
