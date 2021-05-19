@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Link from "next/link";
+import Skills from "../components/Skills";
 
 export default function Index() {
   const experienceRef = React.useRef(null);
@@ -351,129 +352,7 @@ export default function Index() {
             {/* ------ skills ------- */}
             <h1 className="lg:hidden">Skills</h1>
             <div id="skills" ref={skillsRef}></div>
-            <div className="flex flex-wrap items-baseline justify-center mx-auto mb-20 space-y-6 lg:space-y-8 md:justify-start lg:mt-20 lg:w-3/4 lg:mb-24">
-              <div className="py-2 md:w-1/2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-
-                  {/*  */}
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                </div>
-                <p className="mt-2 text-sm text-gray-400 lg:text-lg">
-                  JavaScript
-                </p>
-              </div>
-              <div className="py-2 md:w-1/2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                </div>
-                <p className="mt-2 text-sm text-gray-400 lg:text-lg">Next.js</p>
-              </div>
-              <div className="py-2 md:w-1/2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                </div>
-                <p className="mt-2 text-sm text-gray-400 lg:text-lg">
-                  React.js
-                </p>
-              </div>
-              <div className="py-2 md:w-1/2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                </div>
-                <p className="mt-2 text-sm text-gray-400 lg:text-lg">
-                  Tailwind css
-                </p>
-              </div>
-              <div className="py-2 md:w-1/2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                </div>
-                <p className="mt-2 text-sm text-gray-400 lg:text-lg">
-                  Storybook
-                </p>
-              </div>
-              <div className="py-2 md:w-1/2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                </div>
-                <p className="mt-2 text-sm text-gray-400 lg:text-lg">Redux</p>
-              </div>
-              <div className="py-2 md:w-1/2">
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                  <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                </div>
-                <p className="mt-2 text-sm text-gray-400 lg:text-lg">Webpack</p>
-              </div>
-            </div>
+            <Skills />
             {/* ------ skills ------- */}
 
             {/* ------ contact me ------- */}

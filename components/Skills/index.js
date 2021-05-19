@@ -1,0 +1,324 @@
+import React from "react";
+import { ReactLogo, Nodejs } from "@styled-icons/boxicons-logos";
+import { JsSquare, GithubSquare } from "@styled-icons/fa-brands";
+import { Reactjs } from "@styled-icons/remix-line";
+import { Html5 } from "@styled-icons/typicons";
+import {
+  NextDotJs,
+  Redux,
+  ReduxSaga,
+  Csswizardry,
+  StyledComponents,
+  Docker,
+  Babel,
+  Webpack,
+  Storybook,
+  Typescript,
+  Cypress,
+  Tailwindcss,
+} from "@styled-icons/simple-icons";
+
+import { ShadowContainer } from "./styles";
+
+function IconCard(props) {
+  const { dropShadowColor, icon, title } = props;
+  return (
+    <div className="w-min p-4">
+      <ShadowContainer
+        className="rounded-full bg-gray-100 w-min mx-auto"
+        color={dropShadowColor}
+      >
+        {icon}
+      </ShadowContainer>
+      <p className="text-center mt-2">{title}</p>
+    </div>
+  );
+}
+
+export default function Skills() {
+  if (false) {
+    return (
+      <div className="flex flex-wrap items-baseline justify-center mx-auto mb-20 space-y-6 lg:space-y-8 md:justify-start lg:mt-20 lg:w-3/4 lg:mb-24">
+        <div className="py-2 md:w-1/2">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+
+            {/*  */}
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-sm text-gray-400 lg:text-lg">JavaScript</p>
+        </div>
+        <div className="py-2 md:w-1/2">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-sm text-gray-400 lg:text-lg">Next.js</p>
+        </div>
+        <div className="py-2 md:w-1/2">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-sm text-gray-400 lg:text-lg">React.js</p>
+        </div>
+        <div className="py-2 md:w-1/2">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-sm text-gray-400 lg:text-lg">Tailwind css</p>
+        </div>
+        <div className="py-2 md:w-1/2">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-sm text-gray-400 lg:text-lg">Storybook</p>
+        </div>
+        <div className="py-2 md:w-1/2">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+
+            <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-sm text-gray-400 lg:text-lg">Redux</p>
+        </div>
+        <div className="py-2 md:w-1/2">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+            <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
+          </div>
+          <p className="mt-2 text-sm text-gray-400 lg:text-lg">Webpack</p>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div class="p-2 flex flex-wrap justify-center">
+      {/* ---------- REACT ------------ */}
+      <IconCard
+        dropShadowColor="#61dafb"
+        icon={
+          <ReactLogo className="h-20 w-20 p-3 hover:text-react  text-night hover:scale-105 transform duration-200" />
+        }
+        title="React"
+      />
+      {/* ---------- REACT ------------ */}
+      {/* ---------- Next Js ------------ */}
+      <IconCard
+        dropShadowColor="#fafafa"
+        icon={
+          <NextDotJs className="h-20 w-20 p-4  hover:text-dusk  text-night hover:scale-105 transform duration-200" />
+        }
+        title="Next.js"
+      />
+      {/* ---------- Next Js ------------ */}
+      {/* ---------- JS ------------ */}
+      <IconCard
+        dropShadowColor="#efd819"
+        icon={
+          <JsSquare className="h-20 w-20 p-4 hover:text-js  text-night hover:scale-105 transform duration-200" />
+        }
+        title="JavaScript"
+      />
+      {/* ---------- JS ------------ */}
+      {/* ---------- HTML ------------ */}
+      <IconCard
+        dropShadowColor="#ea6328"
+        icon={
+          <Html5 className="h-20 w-20 p-3 hover:text-html  text-night hover:scale-105 transform duration-200" />
+        }
+        title="HTML"
+      />
+      {/* ---------- HTML ------------ */}
+      {/* ---------- CSS ------------ */}
+      <IconCard
+        dropShadowColor="#2763e9"
+        icon={
+          <Csswizardry className="h-20 w-20 p-5 hover:text-css  text-night hover:scale-105 transform duration-200" />
+        }
+        title="CSS"
+      />
+      {/* ---------- CSS ------------ */}
+      {/* ---------- Redux ------------ */}
+      <IconCard
+        dropShadowColor="#7248b6"
+        icon={
+          <Redux className="h-20 w-20 p-4 hover:text-redux  text-night hover:scale-105 transform duration-200" />
+        }
+        title="Redux"
+      />
+      {/* ---------- Redux ------------ */}
+      {/* ---------- ReduxSaga ------------ */}
+      <IconCard
+        dropShadowColor="#84d269"
+        icon={
+          <ReduxSaga className="h-20 w-20 p-4 hover:text-saga  text-night hover:scale-105 transform duration-200" />
+        }
+        title="Redux Saga"
+      />
+      {/* ---------- ReduxSaga ------------ */}
+      {/* ---------- ReactN ------------ */}
+      <IconCard
+        dropShadowColor="#61dafb"
+        icon={
+          <Reactjs className="h-20 w-20 p-4 hover:text-react  text-night hover:scale-105 transform duration-200" />
+        }
+        title="React Native"
+      />
+      {/* ---------- ReactN ------------ */}
+      {/* ---------- StyledComponents ------------ */}
+      <IconCard
+        dropShadowColor="#d76c8d"
+        icon={
+          <StyledComponents className="h-20 w-20 p-4 hover:text-styled-components text-night hover:scale-105 transform duration-200" />
+        }
+        title="Styled Components"
+      />
+      {/* ---------- StyledComponents ------------ */}
+      {/* ---------- GithubSquare ------------ */}
+      <IconCard
+        dropShadowColor="#161b22"
+        icon={
+          <GithubSquare className="h-20 w-20 p-4 hover:text-git text-night hover:scale-105 transform duration-200" />
+        }
+        title="Git"
+      />
+      {/* ---------- GithubSquare ------------ */}
+      {/* ---------- Storybook ------------ */}
+      <IconCard
+        dropShadowColor="#ff4685"
+        icon={
+          <Storybook className="h-20 w-20 p-5 hover:text-story-book text-night hover:scale-105 transform duration-200" />
+        }
+        title="Storybook"
+      />
+      {/* ---------- Storybook ------------ */}
+      {/* ---------- Tailwindcss ------------ */}
+      <IconCard
+        dropShadowColor="#ff4685"
+        icon={
+          <Tailwindcss className="h-20 w-20 p-5 hover:text-tailwind text-night hover:scale-105 transform duration-200" />
+        }
+        title="Tailwind css"
+      />
+      {/* ---------- Tailwindcss ------------ */}
+      {/* ---------- Nodejs ------------ */}
+      <IconCard
+        dropShadowColor="#72ab63"
+        icon={
+          <Nodejs className="h-20 w-20 p-4 hover:text-node text-night hover:scale-105 transform duration-200" />
+        }
+        title="Node.js"
+      />
+      {/* ---------- Nodejs ------------ */}
+      {/* ---------- Docker ------------ */}
+      <IconCard
+        dropShadowColor="#2496ec"
+        icon={
+          <Docker className="h-20 w-20 p-4 hover:text-docker text-night hover:scale-105 transform duration-200" />
+        }
+        title="Docker"
+      />
+      {/* ---------- Docker ------------ */}
+      {/* ---------- Webpack ------------ */}
+      <IconCard
+        dropShadowColor="#8bcef1"
+        icon={
+          <Webpack className="h-20 w-20 p-4 hover:text-webpack text-night hover:scale-105 transform duration-200" />
+        }
+        title="Webpack"
+      />
+      {/* ---------- Webpack ------------ */}
+      {/* ---------- Babel ------------ */}
+      <IconCard
+        dropShadowColor="#f9dc3c"
+        icon={
+          <Babel className="h-20 w-20 p-5 hover:text-babel text-night hover:scale-105 transform duration-200" />
+        }
+        title="Babel"
+      />
+      {/* ---------- Babel ------------ */}
+      {/* ---------- Cypress ------------ */}
+      <IconCard
+        dropShadowColor="#47474a"
+        icon={
+          <Cypress className="h-20 w-20 p-4 hover:text-cypress text-night hover:scale-105 transform duration-200" />
+        }
+        title="Cypress"
+      />
+      {/* ---------- Cypress ------------ */}
+      {/* ---------- Typescript ------------ */}
+      <IconCard
+        dropShadowColor="#3074bf"
+        icon={
+          <Typescript className="h-20 w-20 p-5 hover:text-ts text-night hover:scale-105 transform duration-200" />
+        }
+        title="Typescript"
+      />
+      {/* ---------- Typescript ------------ */}
+    </div>
+  );
+}
