@@ -58,8 +58,8 @@ export default function Index() {
               <p className="mb-6 leading-loose text-dawn">
                 I am frontend developer. Building <span role="img"> 🌈 </span>{" "}
                 UI using modern frontend tools, for nearly 4 years. Currently
-                working at Dunzo. Extensive experience with React and React
-                Native. Stack and tech agnostic by a true JS enthusiast{" "}
+                working at Dunzo. I am Stack and tech agnostic, but a true JS
+                enthusiast{" "}
                 <span role="img" className="animate-pulse">
                   💓
                 </span>
@@ -225,9 +225,13 @@ export default function Index() {
           {/* ---------- right --------- */}
           <div className="flex-1 lg:py-20 lg:h-screen lg:overflow-y-scroll">
             {/* ------ experience ------- */}
-            <h1 className="lg:hidden">Experience</h1>
-            <div id="experience" ref={experienceRef}></div>
-            <div className="flex-col items-center mb-20 space-y-10 lg:flex lg:mb-24">
+            <div id="experience" className="pt-14" ref={experienceRef}></div>
+            <h1 className="lg:hidden">
+              Experience{" "}
+              <div className="h-0.5 w-1/2 bg-dawn rounded-full"></div>
+            </h1>
+
+            <div className="flex-col items-center mb-20 space-y-14 lg:flex lg:mb-24">
               {/* ----- dunzo ---- */}
               <div className="relative p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
                 <img
@@ -251,7 +255,8 @@ export default function Index() {
                       ⚡
                     </span>{" "}
                     Dunzo is the new name for India's hyper local delivery
-                    platform. We help people to get things dun!{" "}
+                    platform. We help people to get things{" "}
+                    <span className="text-green-400">Dun!</span>{" "}
                     <span role="img" alt="thumbs up emoji">
                       👍
                     </span>
@@ -259,8 +264,8 @@ export default function Index() {
                   </p>
                   <p>
                     With a growing network of delivery partners, currently we
-                    operate in 7 major Indian cities. And monthly we see +1.5Mn
-                    transactions in our platform.
+                    operate in 7 major Indian cities. Monthly we see +1.5Mn
+                    transactions on our platform.
                   </p>
                   <p>
                     I mostly work on Dunzo web, the design system and Google
@@ -269,7 +274,7 @@ export default function Index() {
                     <span role="img" alt="smile emoji">
                       😎
                     </span>{" "}
-                    Google stuff.
+                    Google things.
                   </p>
                 </div>
               </div>
@@ -298,14 +303,15 @@ export default function Index() {
                     <span role="img" alt="scooter emoji">
                       🛵
                     </span>{" "}
-                    is a Bangalore-based startup that operates more than 50K
+                    is a Bangalore-based bike rental platform. We operate +50K
                     electric and gasoline dock-less bikes and scooters in nearly
-                    three dozen cities in India.
+                    three dozen cities in India. Bounce is unique with its pick
+                    up and drop anywhere model.
                   </p>
                   <p>
                     At Bounce, we were trying to build a task engine to monitor
                     and manage cluster level operations. I was also working on
-                    internal dashboards and monitoring tools for Operations
+                    internal dashboards and monitoring tools for the Operations
                     team.
                   </p>
                 </div>
@@ -336,13 +342,16 @@ export default function Index() {
                       🌐
                     </span>{" "}
                     is a pioneer in engineering services sector. We served many
-                    engineering verticals, from Defence to Aerospace, from
-                    Mechanical to Electrical. QuEST has a vivid customer base,
-                    which includes bigger names in the market like GE, Pratt &
+                    engineering verticals, from defence to aerospace, from
+                    mechanical to electrical, and from software to
+                    transportation. QuEST has a vivid customer base, which
+                    includes bigger names in the market like GE, Pratt &
                     Whitney, Airbus and Bombardier, to name a few.
                   </p>
                   <p>
-                    The plethora of projects helped me learn and explore a lot.
+                    Journey at QuEST was eventful. It helped me to explore
+                    different tech stacks and tools. The plethora of projects
+                    helped me learn and explore a lot.
                   </p>
                 </div>
               </section>
@@ -350,22 +359,27 @@ export default function Index() {
             </div>
             {/* ------ experience ------- */}
             {/* ------ skills ------- */}
-            <h1 className="lg:hidden">Skills</h1>
+            <h1 className="lg:hidden">
+              Skills <div className="h-0.5 w-1/2 bg-dawn rounded-full"></div>
+            </h1>
             <div id="skills" ref={skillsRef}></div>
             <Skills />
             {/* ------ skills ------- */}
 
             {/* ------ contact me ------- */}
-            <h1 className="lg:hidden">Contact me</h1>
+            <h1 className="lg:hidden">
+              Contact me{" "}
+              <div className="h-0.5 w-1/2 bg-dawn rounded-full"></div>
+            </h1>
             <div className="pb-14">
               <p className="text-lg leading-loose text-dawn">
-                If you find my work interesting feel free to ping. Let's us stay
-                connected on LinedIn. I don't mind a few{" "}
-                <span role="img">⭐️ </span> on GitHub. I am some articles on
-                Dev.to, I would love to hear your comments on them.
+                If you find my work interesting, feel free to ping. Let's us
+                stay connected on LinkedIn. I don't mind a few{" "}
+                <span role="img">⭐️ </span> on my Git. I pen on Dev.to, and I
+                would love to read your comments.
               </p>
 
-              <p className="text-xs text-center mt-9">
+              <p className="text-sm text-center mt-9">
                 Build using{" "}
                 <a
                   href="https://tailwindcss.com/"
