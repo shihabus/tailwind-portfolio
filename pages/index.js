@@ -58,7 +58,7 @@ export default function Index() {
               <p className="mb-6 leading-loose text-dawn">
                 I am frontend developer. Building <span role="img"> 🌈 </span>{" "}
                 UI using modern frontend tools, for nearly 4 years. Currently
-                working at Dunzo. I am Stack and tech agnostic, but a true JS
+                working at Dunzo. I am stack and tech agnostic, but a true JS
                 enthusiast{" "}
                 <span role="img" className="animate-pulse">
                   💓
