@@ -123,8 +123,8 @@ export default function Index() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       viewBox="0 0 12 12"
                       aria-hidden="true"
                       className="flex-none w-3 h-3 stroke-current"
@@ -159,8 +159,8 @@ export default function Index() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       viewBox="0 0 12 12"
                       aria-hidden="true"
                       className="flex-none w-3 h-3 stroke-current"
@@ -199,8 +199,8 @@ export default function Index() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       viewBox="0 0 12 12"
                       aria-hidden="true"
                       className="flex-none w-3 h-3 stroke-current"
@@ -226,9 +226,13 @@ export default function Index() {
             {/* ------ experience ------- */}
             <h1 className="lg:hidden">Experience</h1>
             <div id="experience" ref={experienceRef}></div>
-            <div className="flex-col items-center mb-20 space-y-8 lg:flex lg:mb-24">
+            <div className="flex-col items-center mb-20 space-y-10 lg:flex lg:mb-24">
               {/* ----- dunzo ---- */}
-              <div className="p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
+              <div className="relative p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
+                <img
+                  src="/dunzo.png"
+                  className="absolute top-0 right-0 transform -translate-x-5 -translate-y-8 shadow h-14 w-14 md:h-20 md:w-20"
+                />
                 <p className="text-xl font-medium">
                   <span>SDE II</span> @{" "}
                   <a
@@ -271,7 +275,11 @@ export default function Index() {
               {/* ----- dunzo ---- */}
 
               {/* ----- bounce ---- */}
-              <section className="p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
+              <section className="relative p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
+                <img
+                  src="/bounce_logo.png"
+                  className="absolute top-0 right-0 transform -translate-x-5 -translate-y-8 shadow w-18 h-14 md:h-20 md:w-22"
+                />
                 <p className="text-xl font-medium">
                   <span>Frontend developer</span> @{" "}
                   <a
@@ -304,7 +312,11 @@ export default function Index() {
               {/* ----- bounce ---- */}
 
               {/* ----- quest ---- */}
-              <section className="p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
+              <section className="relative p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
+                <img
+                  src="/quest.png"
+                  className="absolute top-0 right-0 transform -translate-x-5 -translate-y-8 shadow w-18 h-14 md:h-20 md:w-22 bg-white p-2 rounded-lg"
+                />
                 <p className="text-xl font-medium">
                   <span>Software engineer</span> @{" "}
                   <a
