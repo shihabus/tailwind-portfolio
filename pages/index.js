@@ -56,7 +56,7 @@ export default function Index() {
 
               {/* ------- para -------- */}
               <p className="mb-6 leading-loose text-dawn">
-                I am frontend developer. Building <span role="img"> 🌈 </span>{" "}
+                I'm a frontend developer. Building <span role="img"> 🌈 </span>{" "}
                 UI using modern frontend tools, for nearly 4 years. Currently
                 working at Dunzo. I am stack and tech agnostic, but a true JS
                 enthusiast{" "}
@@ -281,7 +281,7 @@ export default function Index() {
                   className="absolute top-0 right-0 transform -translate-x-5 -translate-y-8 shadow h-14 w-14 md:h-20 md:w-20"
                 />
                 <p className="text-xl font-medium">
-                  <span>SDE II</span> @{" "}
+                  <span>SDE I</span> @{" "}
                   <a
                     href="https://www.dunzo.com/"
                     target="_blank"
@@ -310,9 +310,9 @@ export default function Index() {
                     transactions on our platform.
                   </p>
                   <p>
-                    I mostly work on Dunzo web, the design system and Google
-                    Spot apps. Being India's first Google backed startup, I was
-                    able to work on a lot of{" "}
+                    I work on Dunzo web, the design system and Google Spot apps.
+                    Being India's first Google backed startup, I was able to
+                    work on a lot of{" "}
                     <span role="img" alt="smile emoji">
                       😎
                     </span>{" "}
@@ -346,13 +346,13 @@ export default function Index() {
                       🛵
                     </span>{" "}
                     is a Bangalore-based bike rental platform. We operate +50K
-                    electric and gasoline dock-less bikes and scooters in nearly
-                    three dozen cities in India. Bounce is unique with its pick
-                    up and drop anywhere model.
+                    electric and gasoline dock-less scooters in nearly three
+                    dozen India cities. Bounce is unique with its pick up and
+                    drop anywhere model.
                   </p>
                   <p>
-                    At Bounce, we were trying to build a task engine to monitor
-                    and manage cluster level operations. I was also working on
+                    At Bounce, we were building a task engine to monitor and
+                    manage cluster level operations. I was also working on
                     internal dashboards and monitoring tools for the Operations
                     team.
                   </p>
