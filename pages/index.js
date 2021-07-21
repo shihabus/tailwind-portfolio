@@ -213,6 +213,48 @@ export default function Index() {
                   </div>
                 </a>
                 {/* -------- devto -------- */}
+
+                {/* -------- resume -------- */}
+                <a
+                  className="flex items-center tbaseline md:space-x-3 hover:text-gray-500"
+                  href="https://drive.google.com/file/d/1Irq-neRh0hesNvMZLEfx0BZ_aBSEinlQ/view"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="fill-current w-7 h-7 md:w-5 md:h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      fill="#0a0a0a"
+                    />
+                  </svg>
+                  <span className="hidden md:block">Resume</span>
+                  <div className="hidden md:block">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      viewBox="0 0 12 12"
+                      aria-hidden="true"
+                      className="flex-none w-3 h-3 stroke-current"
+                    >
+                      <title>External link icon</title>
+                      <path d="M10.976 1.193A.314.314 0 0010.687 1H6.312a.313.313 0 000 .625h3.62L5.467 6.091a.313.313 0 00.443.442l4.466-4.466v3.62a.313.313 0 00.625 0V1.313a.328.328 0 00-.024-.119z"></path>
+                      <path d="M3.5 1v.625H2.25a.625.625 0 00-.625.625v7.5c0 .345.28.625.625.625h7.5c.345 0 .625-.28.625-.625V8.5H11v1.875c0 .345-.28.625-.625.625h-8.75A.625.625 0 011 10.375v-8.75C1 1.28 1.28 1 1.625 1H3.5z"></path>
+                    </svg>
+                  </div>
+                </a>
+                {/* -------- resume -------- */}
               </div>
               {/* ----- links ------ */}
             </div>
