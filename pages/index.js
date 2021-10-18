@@ -281,7 +281,7 @@ export default function Index() {
                   className="absolute top-0 right-0 transform -translate-x-5 -translate-y-8 shadow h-14 w-14 md:h-20 md:w-20"
                 />
                 <p className="text-xl font-medium">
-                  <span>SDE I</span> @{" "}
+                  <span>SDE II</span> @{" "}
                   <a
                     href="https://www.dunzo.com/"
                     target="_blank"
