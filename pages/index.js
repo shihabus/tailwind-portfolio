@@ -58,8 +58,11 @@ export default function Index() {
               <p className="mb-6 leading-loose text-dawn">
                 I'm a frontend developer. Building <span role="img"> 🌈 </span>{" "}
                 UI using modern frontend tools, for nearly 4 years. Currently
-                working at Dunzo. I am stack and tech agnostic, but a true JS
-                enthusiast{" "}
+                working at <span className="text-blue-400">Salesforce</span>{" "}
+                <span role="img" alt="cloud emoji">
+                  ☁️
+                </span>
+                . I am stack and tech agnostic, but a true JS enthusiast{" "}
                 <span role="img" className="animate-pulse">
                   💓
                 </span>
@@ -274,6 +277,55 @@ export default function Index() {
             </h1>
 
             <div className="flex-col items-center mb-20 space-y-14 lg:flex lg:mb-24">
+              {/* ----- salesforce ---- */}
+              <div className="relative p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
+                <img
+                  src="/salesforce.png"
+                  className="absolute top-0 right-0 transform -translate-x-5 -translate-y-8 shadow h-14 w-16 md:h-20 md:w-24"
+                />
+                <p className="text-xl font-medium">
+                  <span>Member of Technical Staff</span> @{" "}
+                  <a
+                    href="https://www.salesforce.com/"
+                    target="_blank"
+                    className="text-blue-400 underline"
+                  >
+                    Salesforce
+                  </a>
+                </p>
+                <p className="text-sm text-gray-400">2021-Present</p>
+                <div className="mt-4 space-y-2 tracking-wide text-justify lg">
+                  <p>
+                    Salesforce{" "}
+                    <span role="img" alt="cloud emoji">
+                      ☁️
+                    </span>{" "}
+                    is the biggest CRM company in the world. We help marketing,
+                    sales, commerce, service and IT teams work as one from
+                    anywhere.
+                  </p>
+                  <p>
+                    I am part of the Hyperforce team. Hyperforce will empower
+                    Salesforce customers to securely deploy Salesforce apps and
+                    services from anywhere, while using the scale and agility of
+                    the public cloud.
+                  </p>
+                  <p>
+                    My team was working on the tools to orchestrate and manage
+                    the deployments. For frontend development, we used
+                    Salesforce's UI framework called{" "}
+                    <a
+                      href="https://lwc.dev/"
+                      target="_blank"
+                      className="underline decoration-sky-500"
+                    >
+                      Lightning Web Components.
+                    </a>
+                  </p>
+                </div>
+              </div>
+              {/* ----- salesforce ---- */}
+
               {/* ----- dunzo ---- */}
               <div className="relative p-6 my-3 text-gray-200 transition duration-300 transform rounded-lg bg-dusk lg:w-2/3 lg:hover:scale-110">
                 <img
@@ -290,7 +342,7 @@ export default function Index() {
                     Dunzo
                   </a>
                 </p>
-                <p className="text-sm text-gray-400">2020-Present</p>
+                <p className="text-sm text-gray-400">2020-2021</p>
                 <div className="mt-4 space-y-2 tracking-wide text-justify lg">
                   <p>
                     <span role="img" alt="voltage emoji">
