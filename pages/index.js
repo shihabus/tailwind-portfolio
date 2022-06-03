@@ -7,6 +7,7 @@ export default function Index() {
   const experienceRef = React.useRef(null);
   const skillsRef = React.useRef(null);
 
+  // scroll hook
   React.useEffect(() => {
     let observer;
     if (experienceRef.current && skillsRef.current) {
