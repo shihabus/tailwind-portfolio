@@ -58,7 +58,7 @@ export default function Index() {
               {/* ------- para -------- */}
               <p className="mb-6 leading-loose text-dawn">
                 I'm a frontend developer. Building <span role="img"> 🌈 </span>{" "}
-                UI using modern frontend tools, for nearly 4 years. Currently
+                UI using modern frontend tools, for nearly 6 years. Currently
                 working at <span className="text-blue-400">Salesforce</span>{" "}
                 <span role="img" alt="cloud emoji">
                   ☁️
@@ -349,7 +349,7 @@ export default function Index() {
                     <span role="img" alt="voltage emoji">
                       ⚡
                     </span>{" "}
-                    Dunzo is the new name for India's hyper local delivery
+                    Dunzo is the new name for India's hyper-local delivery
                     platform. We help people to get things{" "}
                     <span className="text-green-400">Dun!</span>{" "}
                     <span role="img" alt="thumbs up emoji">
@@ -364,7 +364,7 @@ export default function Index() {
                   </p>
                   <p>
                     I work on Dunzo web, the design system and Google Spot apps.
-                    Being India's first Google backed startup, I was able to
+                    Being India's first Google-backed startup, I was able to
                     work on a lot of{" "}
                     <span role="img" alt="smile emoji">
                       😎
@@ -400,12 +400,12 @@ export default function Index() {
                     </span>{" "}
                     is a Bangalore-based bike rental platform. We operate +50K
                     electric and gasoline dock-less scooters in nearly three
-                    dozen India cities. Bounce is unique with its pick up and
-                    drop anywhere model.
+                    dozen Indian cities. Bounce is unique with its pick-up and
+                    drop-anywhere model.
                   </p>
                   <p>
                     At Bounce, we were building a task engine to monitor and
-                    manage cluster level operations. I was also working on
+                    manage cluster-level operations. I was also working on
                     internal dashboards and monitoring tools for the Operations
                     team.
                   </p>
@@ -444,7 +444,7 @@ export default function Index() {
                     Whitney, Airbus and Bombardier, to name a few.
                   </p>
                   <p>
-                    Journey at QuEST was eventful. It helped me to explore
+                    The journey at QuEST was eventful. It helped me to explore
                     different tech stacks and tools. The plethora of projects
                     helped me learn and explore a lot.
                   </p>
@@ -468,7 +468,7 @@ export default function Index() {
             </h1>
             <div className="pb-14">
               <p className="text-lg leading-loose text-dawn">
-                If you find my work interesting, feel free to ping. Let's us
+                If you find my work interesting, feel free to ping me. Let's us
                 stay connected on LinkedIn. I don't mind a few{" "}
                 <span role="img">⭐️ </span> on my Git. I pen on Dev.to, and I
                 would love to read your comments.
