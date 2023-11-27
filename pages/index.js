@@ -221,7 +221,7 @@ export default function Index() {
                 {/* -------- resume -------- */}
                 <a
                   className="flex items-center tbaseline md:space-x-3 hover:text-gray-500"
-                  href="https://drive.google.com/file/d/1MPceIefPuiLNlY_rXEeTfIRQRFSmCHVl/view"
+                  href="https://drive.google.com/file/d/1EE1u_qJoWpmu1oFQ8DWuEc9U-mpuBSme/view"
                   rel="noopener"
                   target="_blank"
                 >
